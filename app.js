@@ -3,6 +3,17 @@ let numeroLimite = 10;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
+function exibirImagemPadrao() {
+        document.getElementById('imagemPadrao').style.display = 'block';
+        document.getElementById('imagemAcertou').style.display = 'none';
+}
+exibirImagemPadrao();
+
+function exibirImagemAcertou() {
+            document.getElementById('imagemPadrao').style.display = 'none';
+            document.getElementById('imagemAcertou').style.display = 'block';
+        }
+
 document.getElementById('chutar').removeAttribute('disabled');
 
 function gerarNumeroAleatorio() {
@@ -50,6 +61,7 @@ function verificarChute() {
         exibirTextoNaTela('p', mensagemTentativas);
         document.getElementById('chutar').setAttribute('disabled', true);
         document.getElementById('reiniciar').removeAttribute('disabled');
+        exibirImagemAcertou();
 
     } else {
         if (chute === numeroSecreto + 1 || chute === numeroSecreto - 1) {
@@ -76,4 +88,5 @@ function reiniciarJogo() {
     exibirMensagemInicial();
     document.getElementById('reiniciar').setAttribute('disabled', true);
     document.getElementById('chutar').removeAttribute('disabled');
+    exibirImagemPadrao();
 }
