@@ -47,7 +47,7 @@ function exibirMensagemInicial() {
 exibirMensagemInicial();
 
 function verificarChute() {
-    let chute = document.querySelector('input').value;
+    let chute = Number(document.querySelector('input').value);
 
     if (isNaN(chute) || chute < 1 || chute > numeroLimite) {
         exibirTextoNaTela('p', `Por favor, insira um número válido entre 1 e ${numeroLimite}.`);
@@ -65,7 +65,7 @@ function verificarChute() {
 
     } else {
         if (chute === numeroSecreto + 1 || chute === numeroSecreto - 1) {
-            exibirTextoNaTela('p', 'Você quase acertou!.');
+            exibirTextoNaTela('p', 'Você quase acertou!');
     } else if (chute < numeroSecreto) {
             exibirTextoNaTela('p', 'O número secreto é maior que o chute.');
     } else {
@@ -76,7 +76,7 @@ function verificarChute() {
     limparCampo();
     }
 
-function limparCampo() {
+function limparCampo() { 
     chute = document.querySelector('input');
     chute.value = '';
 }
