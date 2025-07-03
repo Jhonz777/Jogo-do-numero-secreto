@@ -47,7 +47,7 @@ function exibirMensagemInicial() {
 exibirMensagemInicial();
 
 function verificarChute() {
-    let chute = Number(document.querySelector('input').value);
+    let chute = parseFloat(document.querySelector('input').value);
 
     if (isNaN(chute) || chute < 1 || chute > numeroLimite) {
         exibirTextoNaTela('p', `Por favor, insira um número válido entre 1 e ${numeroLimite}.`);
