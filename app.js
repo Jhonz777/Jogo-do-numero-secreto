@@ -2,7 +2,7 @@ let listaDeNumerosSorteados = [];
 let numeroLimite = 100;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
-
+//Alteração para o desafio GitHub da ALura - 'Atualize seu repositório local a partir do Remoto.'
 function exibirImagemPadrao() {
         document.getElementById('imagemPadrao').style.display = 'block';
         document.getElementById('imagemAcertou').style.display = 'none';
