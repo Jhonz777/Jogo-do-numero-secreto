@@ -24,10 +24,9 @@ function gerarNumeroAleatorio() {
         listaDeNumerosSorteados = [];
     }
     if (listaDeNumerosSorteados.includes(numeroEscolhido)){
-        return  gerarNumeroAleatorio();
+        return gerarNumeroAleatorio();
     } else {
         listaDeNumerosSorteados.push(numeroEscolhido);
-        console.log(listaDeNumerosSorteados); 
         return numeroEscolhido;
     }
     
